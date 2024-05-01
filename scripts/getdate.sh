@@ -852,12 +852,12 @@ setcustcore(){
 		case "$num" in
 		1)
 			clashcore=clashpre
-			custcorelink=https://github.com/juewuy/ShellClash/releases/download/clash.premium.latest/clash-linux-$cpucore
+			custcorelink=https://github.com/GeoffZhu/ShellCrash/releases/download/clash.premium.latest/clash-linux-$cpucore
 			getcore			
 		;;
 		2)
 			clashcore=clash.meta
-			custcorelink=https://github.com/juewuy/ShellClash/releases/download/clash.meta.alpha/clash-linux-$cpucore
+			custcorelink=https://github.com/GeoffZhu/ShellCrash/releases/download/clash.meta.alpha/clash-linux-$cpucore
 			getcore			
 		;;
 		3)
@@ -1220,7 +1220,7 @@ setserver(){
 	b)
 		echo -----------------------------------------------
 		echo -e "\033[33m如无法连接，请务必先启用clash服务！！！\033[0m"
-		$clashdir/start.sh webget $TMPDIR/clashrelease https://raw.githubusercontent.com/juewuy/ShellClash/master/bin/release_version echooff rediroff 2>$TMPDIR/clashrelease
+		$clashdir/start.sh webget $TMPDIR/clashrelease https://raw.githubusercontent.com/GeoffZhu/ShellCrash/master/bin/release_version echooff rediroff 2>$TMPDIR/clashrelease
 		echo -e "\033[31m请选择想要回退至的release版本：\033[0m"
 		cat $TMPDIR/clashrelease | awk '{print " "NR" "$1}'
 		echo -e " 0 返回上级菜单"
@@ -1229,7 +1229,7 @@ setserver(){
 			setserver
 		elif [ $num -le $(cat $TMPDIR/clashrelease 2>/dev/null | awk 'END{print NR}') ]; then
 			release_version=$(cat $TMPDIR/clashrelease | awk '{print $1}' | sed -n "$num"p)
-			update_url="https://raw.githubusercontent.com/juewuy/ShellClash/$release_version"
+			update_url="https://raw.githubusercontent.com/GeoffZhu/ShellCrash/$release_version"
 			saveserver
 			unset release_url
 		else

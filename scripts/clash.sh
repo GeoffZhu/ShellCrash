@@ -16,7 +16,7 @@ ckcmd(){
 ckstatus(){
 
 	#服务器缺省地址
-	[ -z "$update_url" ] && update_url=https://fastly.jsdelivr.net/gh/juewuy/ShellClash
+	[ -z "$update_url" ] && update_url=https://fastly.jsdelivr.net/gh/GeoffZhu/ShellCrash
 	#检查/读取脚本配置文件
 	if [ -f $CFG_PATH ];then
 		#检查重复行并去除
@@ -1982,7 +1982,7 @@ case "$1" in
 		echo -----------------------------------------
 		echo "在线求助：t.me/ShellClash"
 		echo "官方博客：juewuy.github.io"
-		echo "发布页面：github.com/juewuy/ShellClash"
+		echo "发布页面：github.com/GeoffZhu/ShellCrash"
 		echo -----------------------------------------
 	;;
 	-t)
