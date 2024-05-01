@@ -47,6 +47,7 @@ error_down(){
 }
 #安装及初始化
 gettar(){
+	echo $tarurl
 	webget /tmp/ShellClash.tar.gz $tarurl
 	if [ "$result" != "200" ];then
 		$echo "\033[33m文件下载失败！\033[0m"
